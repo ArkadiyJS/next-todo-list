@@ -1,15 +1,15 @@
 "use client"
 
+import { useState } from "react";
 
 import FormAddTask from "./components/formTodo/formAddTask";
-import { useState } from "react";
 import TasksTodo from "./components/tasksTodo/tasksTodo";
 
 export default function Home() {
 
 
 
-const [tasks,setTasks] = useState([{id:`123`,title:`ssss`,completed:false}])
+
 
 
 
@@ -20,8 +20,8 @@ const [tasks,setTasks] = useState([{id:`123`,title:`ssss`,completed:false}])
 
       
         
-      <FormAddTask  tasks={tasks} setTasks={setTasks} />
-      <TasksTodo tasks={tasks} />
+      <FormAddTask   />
+      <TasksTodo  />
 
 
     </div>

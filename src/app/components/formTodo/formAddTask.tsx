@@ -3,7 +3,7 @@
 import React, {  useState } from 'react';
 import uuid4 from "uuid4";
 
-function FormAddTask({tasks,setTasks}) {
+function FormAddTask() {
 
   const [taskValue,setTaskValue] = useState(``)
 
@@ -19,10 +19,9 @@ function FormAddTask({tasks,setTasks}) {
         title: taskValue,
         completed: false
       }
-      setTasks(...tasks,{newTask})
-      console.log(...tasks,{newTask})
-
-      console.log(tasks)
+      // setTasks(...tasks,{newTask})
+      
+      
       setTaskValue(``)
     }
 
