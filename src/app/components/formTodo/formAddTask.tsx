@@ -21,7 +21,7 @@ function FormAddTask() {
       }
       // setTasks(...tasks,{newTask})
       
-      
+      console.log({...newTask})
       setTaskValue(``)
     }
 
