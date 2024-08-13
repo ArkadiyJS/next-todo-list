@@ -1,21 +1,22 @@
 "use client"
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import FormAddTask from "./components/formTodo/formAddTask";
 import TasksTodo from "./components/tasksTodo/tasksTodo";
+import TodoContextProvider, { TodoContext } from "./contexts/todos";
 
 export default function Home() {
 
 
-
+  const {todo,addTask,removeTask,completedTask} = useContext(TodoContext)
 
 
 
 
 
   return (
-    <div>
+    <TodoContextProvider>
       <h1> TODO LIST</h1>
 
       
@@ -24,6 +25,6 @@ export default function Home() {
       <TasksTodo  />
 
 
-    </div>
+    </TodoContextProvider>
   );
 }

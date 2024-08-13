@@ -4,7 +4,7 @@ function TaskTodo(props) {
   return (
     <li>
       {props.title}
-      {props.complited}
+      {props.completed}
     </li>
   );
 }

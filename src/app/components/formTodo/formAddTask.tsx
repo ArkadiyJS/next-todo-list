@@ -1,7 +1,7 @@
 "use client"
 
 import React, {  useState } from 'react';
-import uuid4 from "uuid4";
+
 
 function FormAddTask() {
 
@@ -12,18 +12,10 @@ function FormAddTask() {
   const handleSubmit = (event:any) =>{
     event.preventDefault()
 
-    if (!!taskValue){
 
-      const newTask ={
-        id: uuid4(),
-        title: taskValue,
-        completed: false
-      }
-      // setTasks(...tasks,{newTask})
-      
-      console.log({...newTask})
+      console.log(`handle work`)
       setTaskValue(``)
-    }
+    
 
   }
 
@@ -32,13 +24,13 @@ function FormAddTask() {
 
         <input 
           value={taskValue}
-          onChange={event=>setTaskValue(event.target.value)}
+          onChange={(event)=>setTaskValue(event.target.value)}
           type="text"
           placeholder="Название задачи" />
         
         <button type='submit' disabled={taskValue === ``}> Добавить задачу</button>
 
-        {taskValue}
+       
     </form>
   );
 }
